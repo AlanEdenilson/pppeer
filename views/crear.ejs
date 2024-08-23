@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/hola.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+
+</head>
+<body>
+  
+      <div class="box2">
+     
+        <spa class="bg-animate"></spa>
+        <spa class="bg-animate2"></spa>
+     <form action="/registrar" method="post">
+
+        <div class="form-box register{}">
+            <h2>Crear Cuenta</h2>
+            
+               <div class="input-box">
+                  <input type="text"  name="nom" value="<% if(typeof valores != 'undefined') { %><%= valores.nom %><% } %>">
+                  <label>Nombre</label>
+                  <i class='bx bxs-user'></i>
+                  <% if (typeof errors !== 'undefined') { %>
+                     <% if ( errors.nom ) { %>
+                             <div>
+                                 <h2 class="error" 
+                                     
+                                     style="font-family: 'Arial', Times, serif;
+                                     font: small-caps 200% serif;
+                                     font-size: 18px;
+                                     color: #ff0000;
+                                     position: relative;
+                                     top: -15x;
+     
+                                     "><i class="fa-solid fa-circle-exclamation" style="color: #db0c0c;"></i> <%= errors.nom %></h2>
+                                 </div>
+                       <% } %>
+                       <% } %>
+               </div>
+               <div class="input-box">
+                <input type="text"  name="apell" value="<% if(typeof valores != 'undefined') { %><%= valores.apell %><% } %>">
+                <label>Apellido</label>
+                <i class='bx bxs-envelope'></i>
+                <% if (typeof errors !== 'undefined') { %>
+                  <% if ( errors.apell ) { %>
+                          <div>
+                              <h2 class="error" 
+                                  
+                                  style="font-family: 'Arial', Times, serif;
+                                  font: small-caps 200% serif;
+                                  font-size: 18px;
+                                  color: #ff0000;
+                                  position: relative;
+                                  top: -15x;
+  
+                                  "><i class="fa-solid fa-circle-exclamation" style="color: #db0c0c;"></i> <%= errors.apell %></h2>
+                              </div>        
+                    <% } %>
+                    <% } %>
+             </div>
+              
+                 
+                    <div class="input-box">
+                       <input type="email"  name="correo" value="<% if(typeof valores != 'undefined') { %><%= valores.correo %><% } %>">
+                       <label>Correo</label>
+                       <i class='bx bx-store'></i>
+                       <% if (typeof errors !== 'undefined') { %>
+                        <% if ( errors.correo ) { %>
+                                <div>
+                                    <h2 class="error" 
+                                        
+                                        style="font-family: 'Arial', Times, serif;
+                                        font: small-caps 200% serif;
+                                        font-size: 18px;
+                                        color: #ff0000;
+                                        position: relative;
+                                        top: -15x;
+        
+                                        "><i class="fa-solid fa-circle-exclamation" style="color: #db0c0c;"></i> <%= errors.correo %></h2>
+                                    </div>
+                          <% } %>
+                          <% } %>
+                    </div>
+                    
+                        <div class="input-box">
+                           <input type="password" name="pass" value="<% if(typeof valores != 'undefined') { %><%= valores.pass %><% } %>">
+                           <label>Contraseña</label>
+                           <i class='bx bx-right-arrow-alt'></i>
+                           <% if (typeof errors !== 'undefined') { %>
+                              <% if ( errors.pass ) { %>
+                                      <div>
+                                          <h2 class="error" 
+                                              
+                                              style="font-family: 'Arial', Times, serif;
+                                              font: small-caps 200% serif;
+                                              font-size: 18px;
+                                              color: #ff0000;
+                                              position: relative;
+                                              top: -15x;
+              
+                                              "><i class="fa-solid fa-circle-exclamation" style="color: #db0c0c;"></i> <%= errors.pass %></h2>
+                                          </div>
+                                <% } %>
+                                <% } %>
+                        </div>
+                        
+                 <button type="submit" class="btn">Registarse
+                 </button>
+                 <div class="logreg-link">
+                     <p>Ya tienes una cuenta? <a href="/" class="registrer-link">Inicio</a></p>
+        
+                 </div>
+            
+         </div>
+   
+
+
+       </div>
+   </form>
+
+</body>
+</html>

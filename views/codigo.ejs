@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/hola.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="box4">
+     
+        <spa class="bg-animate"></spa>
+        <spa class="bg-animate2"></spa>
+
+    <form action=" /vcodigo" method="post">
+
+        <div class="form-box register{}"><br>
+            <h2>Codigo de Verificacion</h2><br>
+                <p class="holi">Ingrese su codigo de verificacion</p>
+               <div class="input-box">
+       
+                <input type="text" id="codigo" name="codigo" >
+                <label>Ingrese aqui</label>
+                <i class='bx bxs-envelope'></i>
+             </div>
+              
+                 <button type="submit" class="btn" id="boton">Enviar
+                 </button>
+                
+        </div>
+
+    </form>
+       
+
+   
+
+
+ </div>
+
+
+ <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+ <script>
+     
+     var $codigo = $('#codigo');
+     var $boton = $('#boton');
+
+     $codigo.on('input', function() {
+         var codigoIntroducido = $(this).val();
+             // Verifica si el código tiene exactamente 5 dígitos
+         if ( /^\d{5}$/.test(codigoIntroducido)) {
+             $boton.prop('disabled', false);
+             $boton.css({
+             'background-color':'rgb(52, 21, 179)',
+             'cursor':  'pointer'
+         });
+
+         } else {
+             $boton.prop('disabled', true);
+             $boton.css({
+             'background-color':'rgb(19, 183, 198)',
+             'cursor':  'not-allowed'
+         });
+
+         }
+
+        
+     });
+ 
+ </script>
+
+
+ 
+</body>
+</html>
+
+
